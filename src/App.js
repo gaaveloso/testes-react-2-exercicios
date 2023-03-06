@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { act } from "react-dom/test-utils";
 import styled, { createGlobalStyle } from "styled-components";
 import Pokelist from "./components/Pokelist";
 
@@ -23,7 +24,7 @@ const AppWrapper = styled.main`
 
 function App() {
     const [activeModal, setActiveModal] = useState(null)
-
+    console.log(activeModal)
     const openModal = (allPokemonDetails) => {
         setActiveModal(allPokemonDetails)
     }
